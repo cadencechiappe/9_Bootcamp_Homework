@@ -45,7 +45,7 @@ inquirer
   .then((answers) => {
     const markdownPageContent = generateMarkdown(answers);
 
-    fs.writeFile('GeneratedREADME.md', markdownPageContent, (err) =>
+    fs.writeFile('${data.fileName}.md', markdownPageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md!')
     );
   });
